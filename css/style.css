@@ -13,11 +13,6 @@ div.ControlsRow, div.HeadersRow {
 	width: 115px;
 }
 
-.changeButton{
-	 background-color: red;
-	 font-size: 36px;
-}
-
 .hidden{
 	display: none;
 }

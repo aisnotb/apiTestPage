@@ -1,10 +1,26 @@
+/*
+  能少用变量就少用变量，模块化编程出错几率更小
+*/
 function toggleTable(){
-  //让表格和button 消失
+    //让表格和button 消失
     $("#tab_logic, #add_row_link, #delete_row_link").toggle();
-    $("#add_more_link").toggleClass("changeButton");
-    $("#add_more_link").text("键值对增加请求参数");
+    // $("#add_more_link").toggleClass("changeButton");
+    if($("#add_more_link").data("flag") != 1){
+      $("#add_more_link").text("键值增加参数");
+      $("#add_more_link").data("flag",1);
+    }else{
+      $("#add_more_link").text("批量增加JSON参数");
+        $("#add_more_link").data("flag",0);
+    }
 
-    $("#add_more_link").toggleClass("margin-left");
+    $("#add_more_link").toggle(function(){
+
+    }, function(){
+
+    });
+    // $("#add_more_link").toggleClass("margin-left");
+    //show textarea
+    $("#bulkAddDiv").toggleClass('hidden');
 }
 
 function addRow(){
@@ -28,5 +44,3 @@ function update(){
       $(this).find(".padding-right").text(index+1);
     });
 }
-
-//能少用变量就少用变量，模块化编程出错几率更小

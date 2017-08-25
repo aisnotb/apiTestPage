@@ -60,8 +60,6 @@ $(document).ready(function(){
 		//点击按钮时候1 要隐藏表格 2 要隐藏add 和delete button
 		//再次点击的时候需要 恢复 这两个组件
 			toggleTable();
-			$("#buttons").toggle();
-			$("#buttons").toggleClass();
 	});
 
 })
