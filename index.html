@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>api test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-select.css"> -->
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand"></a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">API TEST</a></li>
+                <li><a href="#">balabala test</a></li>
+                <li><a href="#">balallal test</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--navigation bar-->
+
+    <!-- user input box  -->
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-12">
+          <div class="input-group">
+              <div class="input-group-btn">
+                  <button type="button" class="btn btn-default btn-search dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <span class="label-icon">GET</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu pull-left" role="menu">
+                    <li>
+                      <a href="#">
+                        <span class="label-icon">POST</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="label-icon">PUT</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="label-icon">HEAD</span>
+                      </a>
+                    </li>
+                  </ul>
+              </div>
+              <input type="text" class="form-control">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-search btn-success">提取json并格式化</button>
+              </div>
+          </div>
+    </div>
+
+    <!--user input box-->
+<br><br>
+    <!--parameter table-->
+    <div class="row">
+        <!-- <div class="col-lg-1"></div> -->
+        <div class="col-lg-12 column">
+            <table id="tab_logic" class="table table-bordered table-hover">
+                <thead  style="text-align: center">
+                  <tr>
+                    <th>#</th>
+                    <th>参数名称</th>
+                    <th>参数值</th>
+                  </tr>
+                </thead>
+                <tbody id="addLine">
+                  <tr id="id1">
+                    <td>1<span class="padding-left"><input type="checkbox" value="false"></span></td>
+                    <td><input type="text" class="form-control" placeholder="参数名称"></td>
+                    <td><input type="text" class="form-control" placeholder="输入你的参数"></td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- <div class="col-lg-1"></div> -->
+    </div>
+
+  <!--add and delete buttons-->
+    <div class="row">
+      <!-- <div class="col-lg-1"></div> -->
+      <div class="col-lg-12">
+        <a href="#" id="add_row_link" class="pull-left btn btn-success">Add Item</a>
+        <a href="#" id="delete_row_link" class="pull-right btn btn-danger">Delete Item</a>
+      </div>
+      <!-- <div class="col-lg-1"></div> -->
+    </div>
+    <!--add and delete buttons-->
+    <br><br>
+</div>
+
+    <!--parameter-->
+    <textarea id="RawJson" class="form-control">@Copy and paste your data here! :)</textarea>
+    <br>
+    <input type="Button" value="格式化" onclick="Process()" class="submit btn btn-primary">
+    <span id="TabSizeHolder">
+      缩进量
+      <select id="TabSize" onchange="TabSizeChanged()">
+        <option value="1">1</option>
+        <option value="2" selected="true">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </span>
+    <div id="Canvas" class="Canvas">
+      <pre class="CodeContainer"><span class="ObjectBrace">{</span><span><img src="/images/Expanded.gif" onclick="ExpImgClicked(this)"></span><span class="collapsible">
+    <span class="PropertyName">"name"</span>: <span class="ObjectBrace">{</span><span><img src="/images/Expanded.gif" onclick="ExpImgClicked(this)"></span><span class="collapsible">
+        <span class="PropertyName">"first"</span>: <span class="String">"carson"<span class="Comma">,</span> </span>
+        <span class="PropertyName">"last"</span>: <span class="Null">null</span>
+        </span><span class="ObjectBrace">}</span>
+</span><span class="ObjectBrace">}</span>
+  </pre>
+  </div>
+</div>
+
+<!--load js libary -->
+      <script src="jquery-2.1.1.min.js"></script>
+      <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+      <script src="js/getJson.js"></script>
+      <script src="js/dynamicTable.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/transformJson.js"></script>
+  </body>
+</html>
