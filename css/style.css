@@ -1,5 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
+.label-control{
+	height: 34px;
+	width: 100%;
+	margin-bottom: 0px;
+}
 div.ControlsRow, div.HeadersRow {
 	font-family: Georgia;
 }
@@ -8,8 +13,8 @@ div.ControlsRow, div.HeadersRow {
     width:50%;
 }
 
-.padding-left{
-	padding-left: 10px;
+.padding-right{
+	padding-right: 10px;
 }
 
 th,td{

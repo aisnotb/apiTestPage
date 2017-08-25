@@ -6,6 +6,10 @@ $(document).ready(function(){
 			call(url,renderDiv, {}, localData);
 	});
 
+	// $("tr").on("click", function(){
+	// 	alert("you clicked on me ");
+	// });
+
 	function processObject(item, obj){
 		if(obj instanceof Array){
 				//deal with array
