@@ -9,6 +9,10 @@ div.ControlsRow, div.HeadersRow {
 	font-family: Georgia;
 }
 
+.expand-width{
+	width: 115px;
+}
+
 .changeButton{
 	 background-color: red;
 	 font-size: 36px;

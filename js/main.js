@@ -10,6 +10,11 @@ $(document).ready(function(){
 			call(url,renderDiv, {}, localData);
 	});
 
+	//选择测试方式
+	$(".urlType").on('click', function(){
+		$("#chooseType").text( $(this).find("span").text() );
+	});
+
 	// function processObject(item, obj){
 	// 	if(obj instanceof Array){
 	// 			//deal with array
