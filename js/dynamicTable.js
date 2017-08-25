@@ -1,3 +1,12 @@
+function toggleTable(){
+  //让表格和button 消失
+    $("#tab_logic, #add_row_link, #delete_row_link").toggle();
+    $("#add_more_link").toggleClass("changeButton");
+    $("#add_more_link").text("键值对增加请求参数");
+
+    $("#add_more_link").toggleClass("margin-left");
+}
+
 function addRow(){
   var numberOfRows = $("#addLine").find("tr").length+1;
     var content = $("#addLine").append([

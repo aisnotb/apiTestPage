@@ -9,12 +9,40 @@ div.ControlsRow, div.HeadersRow {
 	font-family: Georgia;
 }
 
+.changeButton{
+	 background-color: red;
+	 font-size: 36px;
+}
+
+.hidden{
+	display: none;
+}
+
+.show{
+	display:block;
+}
+
 .my-group .form-control{
     width:50%;
 }
 
 .padding-right{
 	padding-right: 10px;
+}
+
+.margin-top{
+	margin-top: 10px;
+}
+
+.margin-left{
+	margin-left: 30px;
+}
+.margin-bottom{
+	margin-bottom: 8px !important
+}
+
+.margin-right{
+	margin-right: 10px;
 }
 
 th,td{
@@ -39,88 +67,43 @@ div.Canvas
 .ArrayBrace
 {
 	color:#0033FF;
-
 	font-weight:bold;
-
 }
-
-.PropertyName
-
-{
-
+.PropertyName{
 	color:#CC0000;
-
 	font-weight:bold;
-
 }
-
-.String
-
-{
-
+.String{
 	color:#007777;
-
 }
-
-.Number
-
-{
-
+.Number{
 	color:#AA00AA;
-
 }
-
-.Boolean
-
-{
-
+.Boolean{
   color:#0000FF;
-
 }
-
-.Function
-
-{
+.Function{
   color:#AA6633;
-
   text-decoration:italic;
-
 }
 
-.Null
-
-{
-
+.Null{
   color:#0000FF;
-
 }
-
-.Comma
-
-{
-
+.Comma{
   color:#000000;
-
   font-weight:bold;
-
 }
 
 PRE.CodeContainer{
-
   margin-top:0px;
-
   margin-bottom:0px;
-
 }
 
 PRE.CodeContainer img{
-
   cursor:pointer;
-
   border:none;
-
   margin-bottom:-1px;
-
 }
 #CollapsibleViewDetail a{
   padding-left:10px;

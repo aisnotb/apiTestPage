@@ -52,20 +52,20 @@
                     </li>
                   </ul>
               </div>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" placeholder="请输入你的地址...">
               <div class="input-group-btn">
                 <button type="button" class="btn btn-search btn-success">提取json并格式化</button>
               </div>
           </div>
     </div>
-
+</div>
     <!--user input box-->
-<br><br>
+<br>
     <!--parameter table-->
     <div class="row">
         <!-- <div class="col-lg-1"></div> -->
         <div class="col-lg-12 column">
-            <table id="tab_logic" class="table table-bordered table-hover">
+            <table id="tab_logic" class="table table-bordered table-hover margin-bottom">
                 <thead  style="text-align: center">
                   <tr>
                     <th>#</th>
@@ -83,45 +83,50 @@
             </table>
         </div>
         <!-- <div class="col-lg-1"></div> -->
+        <!--add and delete buttons-->
+        <!-- <div class="row" id="buttons"> -->
+          <div class="col-lg-12">
+            <a href="#" id="add_row_link" class="pull-left btn btn-success margin-bottom margin-top">Add Item</a>
+            <a href="#" id="add_more_link" class="pull-left btn btn-primary margin-left margin-top">批量增加JSON参数</a>
+            <a href="#" id="delete_row_link" class="pull-right btn btn-danger">Delete Item</a>
+          </div>
     </div>
+    <br>
 
-  <!--add and delete buttons-->
-    <div class="row">
-      <!-- <div class="col-lg-1"></div> -->
-      <div class="col-lg-12">
-        <a href="#" id="add_row_link" class="pull-left btn btn-success">Add Item</a>
-        <a href="#" id="delete_row_link" class="pull-right btn btn-danger">Delete Item</a>
-      </div>
-      <!-- <div class="col-lg-1"></div> -->
-    </div>
-    <!--add and delete buttons-->
-    <br><br>
-</div>
+
+    <!-- a hidden div -->
+    <textarea id="hiddendiv" class="margin-top form-control" placeholder="这里可以输入a=1&b=2....."></textarea>
+    <br>
 
     <!--parameter-->
     <textarea id="RawJson" class="form-control">@Copy and paste your data here! :)</textarea>
     <br>
-    <input type="Button" value="格式化" onclick="Process()" class="submit btn btn-primary">
-    <span id="TabSizeHolder">
-      缩进量
-      <select id="TabSize" onchange="TabSizeChanged()">
-        <option value="1">1</option>
-        <option value="2" selected="true">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-      </select>
-    </span>
-    <div id="Canvas" class="Canvas">
-      <pre class="CodeContainer"><span class="ObjectBrace">{</span><span><img src="/images/Expanded.gif" onclick="ExpImgClicked(this)"></span><span class="collapsible">
-    <span class="PropertyName">"name"</span>: <span class="ObjectBrace">{</span><span><img src="/images/Expanded.gif" onclick="ExpImgClicked(this)"></span><span class="collapsible">
-        <span class="PropertyName">"first"</span>: <span class="String">"carson"<span class="Comma">,</span> </span>
-        <span class="PropertyName">"last"</span>: <span class="Null">null</span>
-        </span><span class="ObjectBrace">}</span>
-</span><span class="ObjectBrace">}</span>
-  </pre>
-  </div>
+
+    <div class="row">
+          <div class="col-lg-12">
+        <div id="Canvas" class="Canvas">
+          <pre class="CodeContainer"><span class="ObjectBrace">{</span><span><img src="/images/Expanded.gif" onclick="ExpImgClicked(this)"></span><span class="collapsible">
+        <span class="PropertyName">"name"</span>: <span class="ObjectBrace">{</span><span><img src="/images/Expanded.gif" onclick="ExpImgClicked(this)"></span><span class="collapsible">
+            <span class="PropertyName">"first"</span>: <span class="String">"carson"<span class="Comma">,</span> </span>
+            <span class="PropertyName">"last"</span>: <span class="Null">null</span>
+            </span><span class="ObjectBrace">}</span>
+    </span><span class="ObjectBrace">}</span>
+          </pre>
+      </div>
+      <input type="Button" value="格式化" onclick="Process()" class="submit btn btn-primary margin-top">
+      <span id="TabSizeHolder">
+        缩进量
+        <select id="TabSize" onchange="TabSizeChanged()">
+          <option value="1">1</option>
+          <option value="2" selected="true">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </span>
+    </div>
+    </div>
 </div>
 
 <!--load js libary -->
