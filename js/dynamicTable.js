@@ -13,20 +13,13 @@ function toggleTable(){
         $("#add_more_link").data("flag",0);
     }
 
-    $("#add_more_link").toggle(function(){
-
-    }, function(){
-
-    });
-    // $("#add_more_link").toggleClass("margin-left");
-    //show textarea
     $("#bulkAddDiv").toggleClass('hidden');
 }
 
 function addRow(){
   var numberOfRows = $("#addLine").find("tr").length+1;
     var content = $("#addLine").append([
-      '<tr id="id">',
+      '<tr id="id'+ numberOfRows + '">',
         '<td><label class="label-control"><span class="padding-right">'+ numberOfRows + '</span><input type="checkbox" value="false"></label></td>',
         '<td><input type="text" class="form-control" placeholder="参数名称"></td>',
         '<td><input type="text" class="form-control" placeholder="输入你的参数"></td></tr>'
