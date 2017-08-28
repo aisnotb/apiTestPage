@@ -38,10 +38,12 @@ $("#urlAddress, #addLine").on('change', function(){
 
 function setValue(){
 	var httpMethod = sessionStorage.getItem('httpMethod');
+	console.log(httpMethod);
 	var inputAddress = sessionStorage.getItem('inputAddress');
-	$('#chooseType').text(  (httpMethod == ""|| "null") ? "GET" : httpMethod) ;
-	$('#urlAddress').text(  (inputAddress == ""|| "null") ? inputAddress : "") ;
+	$('#chooseType').text(  (httpMethod == "" || "null") ? "GET" : httpMethod) ;
+	$('#urlAddress').text(  (inputAddress == "" || "null") ? inputAddress : "") ;
   var values = sessionStorage.getItem("values");
+	console.log(values);
 	if(values && values.length>0){
 		var item = JSON.parse(values);
 		var rowArr = $("#addLine");
@@ -72,13 +74,30 @@ function populateStorage(){
 	var valueArray = [];
 	$.each(rowArr, function(){
 		var input = $(this).find("input.form-control");
-		var key = $.trim( $(input[0]).val() );
+		var key = $.trim( $(input[0]).val());
 		var value = $.trim( $(input[1]).val() );
 		valueArray.push({"key":key,"value":value});
 		// sessionStorage.setItem("abc", {"key": "values"});
 	})
 	sessionStorage.setItem("values", JSON.stringify( valueArray ));
+}
 
+function deleteStorage(){
+	var rowArr = $("#addLine tr");
+	var values = sessionStorage.getItem("values");
+	if(values.length > 0){
+		$.each(rowArr, function(){
+				var input = $(this).find("input.form-control");
+				var key = $.trim(input[0].val());
+				var value = $.trim(input[1].val());
+				var selectedCheckBoxes = $("input[type='checkbox']:checked");
+
+				$.each(selectedCheckBoxes, function(){
+						sessionStorage.removeItem("");
+				});
+				valueArray.splice();
+		})
+	}
 }
 
 	//hide this textarea
