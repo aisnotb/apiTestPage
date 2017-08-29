@@ -62,7 +62,6 @@ function setValue(){
 }
 
 function populateStorage(){
-
 	sessionStorage.setItem('httpMethod', $("#chooseType").text());
 	sessionStorage.setItem('inputAddress', $.trim( $("#urlAddress").val() ));
 
@@ -101,19 +100,21 @@ function deleteStorage(){
 	var ele = "";
 	$("#sendButton").on('click', function(){
 			var url = "platform:system-gettime";
-			var localData = "test2.json";
+			var localData = $("#urlAddress").val();
+
 			call(url,renderDiv, {}, localData);
 	});
 
 	//选择测试方式
 	$(".urlType").on('click', function(){
+		var method = $(this).find("span").text();
 		$("#chooseType").text( $(this).find("span").text() );
 	});
 
 	function renderDiv(res){
 		// var json = JSON.stringify(res);
 		console.log(res);
-		Process();
+		Process(res);
 	};
 
 	$("#add_row_link").on('click', function(){
@@ -130,17 +131,10 @@ function deleteStorage(){
 			toggleTable();
 	});
 
-	// function openMenu(){
-	// 	$("#my-side-nav").css("width","250px");
-	// }
-	//
-	// function closeMenu(){
-	// 	$("#my-side-nav").css("width", "0px");
-	// }
-
 	//open side navigation bar
 	$("#menu-link").on('click', function(){
 		$("#my-side-nav").css("width", "200px");
+		// $("#my-side-nav").css("margin-right","20px");
 		$(".container").css("margin-right","10px");
 		$("#my-side-nav").css("margin-left", "5px");
 
@@ -157,8 +151,8 @@ function deleteStorage(){
 		$(".container").css("margin-right","auto");
 		$("#my-side-nav").css("width", "0px");
 		$(".container").animate({
-			"margin-right": "auto",
-			"margin-left": "auto"
+			"margin-left": "auto",
+			"margin-right": "auto"
 		},1000, function(){
 			console.log("Closing nav animation complete!");
 		})

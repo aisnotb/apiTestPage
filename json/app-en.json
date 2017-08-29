@@ -1,0 +1,62 @@
+{
+  "success" : true,
+  "errorCode" : "",
+  "errorMessage"  : "",
+  "data": [{ "aid":"a01","code":"ptfw","ico":"aaa","name":"Platform service","desc":"Service Description 20 Chinese characters within 20 Chinese characters","host":"192.168.9.151","port":"8080",
+      "services":[{ "sid":"s01","code":"biz","ico":"bbb","name":"Basic resources","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s02","code":"ptyw","ico":"bbb","name":"Platform operation","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s03","code":"mntr","ico":"bbb","name":"Platform monitoring","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"}
+
+      ]
+    },{ "aid":"a02","code":"jsfw","ico":"aaa","name":"Teaching services","desc":"Service Description 20 Chinese characters within 20 Chinese characters","host":"192.168.9.151","port":"8080",
+      "services":[
+        { "sid":"s04","code":"pyfa","ico":"bbb","name":"Training program","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s05","code":"kkjh","ico":"bbb","name":"Course plan","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s06","code":"jxrw","ico":"bbb","name":"Teaching task","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s07","code":"bpkb","ico":"bbb","name":"Schedule schedule","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s08","code":"xkgl","ico":"bbb","name":"Class Selection Management","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s09","code":"kssw","ico":"bbb","name":"Examination affairs","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s10","code":"sxgl","ico":"bbb","name":"Practice management","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s11","code":"cxcy","ico":"bbb","name":"Innovation entrepreneurship","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s12","code":"bylw","ico":"bbb","name":"Dissertation","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s13","code":"xscj","ico":"bbb","name":"Student achievement","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"}
+      ]
+    },{ "aid":"a03","code":"xsfw","ico":"aaa","name":"Student service","desc":"Service Description 20 Chinese characters within 20 Chinese characters","host":"192.168.9.151","port":"8080",
+      "services":[
+        { "sid":"s14","code":"zsrx","ico":"bbb","name":"Enrollment","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s15","code":"xjda","ico":"bbb","name":"School record","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s16","code":"zcjf","ico":"bbb","name":"Registration fee","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s17","code":"xjyd","ico":"bbb","name":"School turnover","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s18","code":"fxgl","ico":"bbb","name":"Minor management","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s19","code":"jhsgl","ico":"bbb","name":"Exchange student management","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s20","code":"xyyj","ico":"bbb","name":"Academic warning","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s21","code":"zysb","ico":"bbb","name":"Professional identification","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s22","code":"bycl","ico":"bbb","name":"Graduation treatment","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s23","code":"zsgl","ico":"bbb","name":"Certificate management","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s24","code":"lxgl","ico":"bbb","name":"School administration","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"}
+      ]
+    },{ "aid":"a04","code":"jsfw","ico":"aaa","name":"Teacher service","desc":"Service Description 20 Chinese characters within 20 Chinese characters","host":"192.168.9.151","port":"8080",
+      "services":[
+        { "sid":"s25","code":"szgl","ico":"bbb","name":"Faculty","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s26","code":"dspt","ico":"bbb","name":"Tutor platform","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s27","code":"jxyj","ico":"bbb","name":"Teaching performance","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s28","code":"jxyy","ico":"bbb","name":"Teaching application","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"}
+      ]
+    },{ "aid":"a05","code":"zlgg","ico":"aaa","name":"quality engineering","desc":"Service Description 20 Chinese characters within 20 Chinese characters","host":"192.168.9.151","port":"8080",
+      "services":[
+        { "sid":"s29","code":"xspj","ico":"bbb","name":"Students to teach","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s30","code":"ddpj","ico":"bbb","name":"Supervision and evaluation","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s31","code":"jszp","ico":"bbb","name":"Teacher self-evaluation","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s32","code":"tkjl","ico":"bbb","name":"Lecture record","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"}
+      ]
+    },{ "aid":"a06","code":"jcfx","ico":"aaa","name":"Decision analysis","desc":"Service Description 20 Chinese characters within 20 Chinese characters","host":"192.168.9.151","port":"8080",
+      "services":[
+        { "sid":"s33","code":"ztcx","ico":"bbb","name":"Topic query","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s34","code":"tjfx","ico":"bbb","name":"Statistical analysis","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s35","code":"gjb","ico":"bbb","name":"High base table","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s36","code":"dwfx","ico":"bbb","name":"Multidimensional analysis","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"},
+        { "sid":"s37","code":"zhxq","ico":"bbb","name":"Comprehensive correction","desc":"Service Description 20 Chinese characters within 20 Chinese characters","facade":"index"}
+      ]
+    }
+  ]
+}

@@ -12,12 +12,12 @@ function IsArray(obj) {
           !(obj.propertyIsEnumerable('length'));
 }
 
-function Process(){
-
+function Process(res){
   SetTab();
   //window.IsCollapsible = $id("CollapsibleView").checked;
-  var json = $id("RawJson").value;
-  alert("you get" + json);
+  // var json = $id("RawJson").value;
+  // alert("you get" + json);
+  var json = JSON.stringify(res);
   var html = "";
   try{
     if(json == "") json = "\"\"";
