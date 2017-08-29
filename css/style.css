@@ -9,6 +9,45 @@ div.ControlsRow, div.HeadersRow {
 	font-family: Georgia;
 }
 
+.side-nav{
+	height: 100%;
+	width: 0px;
+	position: fixed;
+	z-index: 1;
+	overflow-x: hidden;
+	padding-top: 60px;
+	top: 0;
+	left: 0;
+	background-color: white;
+	transition: 0.5s;
+}
+
+.side-nav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.side-nav a:hover{
+	color: #f1f1f1;
+}
+
+.side-nav .closebtn{
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
 .expand-width{
 	width: 115px;
 }
@@ -131,3 +170,8 @@ PRE.CodeContainer img{
 }
 A.OtherToolsLink { color:#555;text-decoration:none; }
 A.OtherToolsLink:hover { text-decoration:underline; }
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

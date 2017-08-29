@@ -62,11 +62,7 @@ function setValue(){
 }
 
 function populateStorage(){
-	//{"httpMethod":"","inputAddress":"","values":[{"key":"","value":""},{"key":"","value":""},{"key":"","value":""}]}
-	// sessionStorage.clear();
-	// console.log($.trim( $("#chooseType").text() ));
-	// console.log(sessionStorage);
-	// return;
+
 	sessionStorage.setItem('httpMethod', $("#chooseType").text());
 	sessionStorage.setItem('inputAddress', $.trim( $("#urlAddress").val() ));
 
@@ -90,8 +86,7 @@ function deleteStorage(){
 				var input = $(this).find("input.form-control");
 				var key = $.trim(input[0].val());
 				var value = $.trim(input[1].val());
-				var selectedCheckBoxes = $("input[type='checkbox']:checked");
-
+				// var selectedCheckBoxes = $("input[type='checkbox']:checked");
 				$.each(selectedCheckBoxes, function(){
 						sessionStorage.removeItem("");
 				});
@@ -134,4 +129,38 @@ function deleteStorage(){
 			//再次点击的时候需要 恢复 这两个组件
 			toggleTable();
 	});
+
+	// function openMenu(){
+	// 	$("#my-side-nav").css("width","250px");
+	// }
+	//
+	// function closeMenu(){
+	// 	$("#my-side-nav").css("width", "0px");
+	// }
+
+	//open side navigation bar
+	$("#menu-link").on('click', function(){
+		$("#my-side-nav").css("width", "200px");
+		$(".container").css("margin-right","10px");
+		$("#my-side-nav").css("margin-left", "5px");
+
+		//animate the right half page
+		$(".container").animate({
+			"margin-right": "+=30",
+		}, 1000, function(){
+			console.log("openning side nav animation complete!");
+		})
+	})
+
+	//close side nav
+	$(".closebtn").on("click", function(){
+		$(".container").css("margin-right","auto");
+		$("#my-side-nav").css("width", "0px");
+		$(".container").animate({
+			"margin-right": "auto",
+			"margin-left": "auto"
+		},1000, function(){
+			console.log("Closing nav animation complete!");
+		})
+	})
 });
