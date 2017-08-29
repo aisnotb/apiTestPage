@@ -108,6 +108,12 @@ function deleteStorage(){
 	//选择测试方式
 	$(".urlType").on('click', function(){
 		var method = $(this).find("span").text();
+		if (method === 'POST') {
+				console.log("post");
+				$("#post_link").removeClass('hidden');
+		}else{
+			 $("#post_link").addClass('hidden');
+		}
 		$("#chooseType").text( $(this).find("span").text() );
 	});
 
