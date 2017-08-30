@@ -101,12 +101,12 @@
         <!--add and delete buttons-->
         <!-- <div class="row" id="buttons"> -->
         <div class="col-lg-12">
-          <a href="javascript:void(0)" id="add_row_link" class="pull-left btn btn-success margin-bottom margin-top">Add Item</a>
+          <a href="javascript:void(0)" id="add_row_link" class="pull-left btn btn-success margin-bottom margin-top">增加参数</a>
           <a href="javascript:void(0)" id="add_more_link" class="pull-left btn btn-primary margin-left margin-top">批量增加JSON参数</a>
           <a href="javascript:void(0)" id="post_link" class="pull-left btn btn-primary margin-left margin-top hidden">发送POST请求</a>
           <span id="TabSizeHolder">
             缩进量
-            <select id="TabSize" class=" margin-left margin-top" onchange="TabSizeChanged()">
+            <select id="TabSize" class="margin-top" onchange="TabSizeChanged()">
               <option value="1">1</option>
               <option value="2" selected="true">2</option>
               <option value="3">3</option>
@@ -115,7 +115,7 @@
               <option value="6">6</option>
             </select>
           </span>
-          <a href="javascript:void(0)" id="delete_row_link" class="pull-right btn btn-danger">Delete Item</a>
+          <a href="javascript:void(0)" id="delete_row_link" class="pull-right btn btn-danger margin-top">删除参数</a>
         </div>
     </div>
     <!-- a hidden div -->
@@ -124,10 +124,10 @@
     <!--parameter-->
     <textarea id="RawJson" class="form-control">@Copy and paste your data here! :)</textarea>
 
-    <div class="row">
+    <div class="row" style="height: 400px">
           <div class="col-lg-12">
-        <div id="Canvas" class="Canvas">
-          <pre class="CodeContainer"><span class="ObjectBrace">{</span><span><img src="/images/Expanded.gif" onclick="ExpImgClicked(this)"></span><span class="collapsible">
+        <div id="Canvas" class="Canvas" style="height: 300px">
+          <pre class="CodeContainer" style="height: 300px"><span class="ObjectBrace">{</span><span><img src="/images/Expanded.gif" onclick="ExpImgClicked(this)"></span><span class="collapsible">
         <span class="PropertyName">"name"</span>: <span class="ObjectBrace">{</span><span><img src="/images/Expanded.gif" onclick="ExpImgClicked(this)"></span><span class="collapsible">
             <span class="PropertyName">"first"</span>: <span class="String">"carson"<span class="Comma">,</span> </span>
             <span class="PropertyName">"last"</span>: <span class="Null">null</span>
