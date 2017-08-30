@@ -62,6 +62,7 @@ function setValue(){
 			        '<td><input type="text" class="form-control" placeholder="输入你的参数" value="'+item[i].value+'"></td></tr>'
 			    ].join(""));
 		};
+
 	}
 }
 
@@ -95,7 +96,6 @@ function deleteStorage(){
 	sessionStorage.setItem("values", JSON.stringify( valueArray ));
 }
 
-
 	//hide this textarea
 	$("#RawJson").hide();
 
@@ -104,8 +104,7 @@ function deleteStorage(){
 			var url = "platform:system-gettime";
 			var localData = $("#urlAddress").val();
 			var method =$('#chooseType').find("span").text();
-			console.log(method);
-			call(url,renderDiv, {}, localData,);
+			call(url,renderDiv, {}, localData,null,null,method);
 	});
 
 	//选择测试方式
@@ -139,6 +138,14 @@ function deleteStorage(){
 			//点击按钮时候1 要隐藏表格 2 要隐藏add 和delete button
 			//再次点击的时候需要 恢复 这两个组件
 			toggleTable();
+	});
+
+	//enter keyevent
+	$("#addLine tr").find("td:nth-child(3)").on('keypress',function(e){
+		if (e.which == 13) {
+			alert('you clicked on the second one');
+			addRow();
+		}
 	});
 
 	//open side navigation bar

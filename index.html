@@ -67,7 +67,7 @@
                     </li>
                   </ul>
               </div>
-              <input type="text" id="urlAddress" class="form-control" placeholder="请输入你的地址..." value="http://127.0.0.1:3000/json/app-en.json">
+              <input type="text" id="urlAddress" class="form-control" placeholder="请输入你的地址...">
               <div class="input-group-btn">
                 <button type="button" id="sendButton" class="btn btn-search btn-success">发送请求并格式化</button>
               </div>
@@ -104,6 +104,17 @@
           <a href="javascript:void(0)" id="add_row_link" class="pull-left btn btn-success margin-bottom margin-top">Add Item</a>
           <a href="javascript:void(0)" id="add_more_link" class="pull-left btn btn-primary margin-left margin-top">批量增加JSON参数</a>
           <a href="javascript:void(0)" id="post_link" class="pull-left btn btn-primary margin-left margin-top hidden">发送POST请求</a>
+          <span id="TabSizeHolder">
+            缩进量
+            <select id="TabSize" class=" margin-left margin-top" onchange="TabSizeChanged()">
+              <option value="1">1</option>
+              <option value="2" selected="true">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </span>
           <a href="javascript:void(0)" id="delete_row_link" class="pull-right btn btn-danger">Delete Item</a>
         </div>
     </div>
@@ -124,18 +135,8 @@
     </span><span class="ObjectBrace">}</span>
           </pre>
       </div>
-      <input type="Button" value="格式化" onclick="Process()" class="submit btn btn-primary margin-top">
-      <span id="TabSizeHolder">
-        缩进量
-        <select id="TabSize" onchange="TabSizeChanged()">
-          <option value="1">1</option>
-          <option value="2" selected="true">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
-      </span>
+      <!-- <input type="Button" value="格式化" onclick="Process()" class="submit btn btn-primary margin-top"> -->
+
     </div>
     </div>
 </div>
