@@ -25,20 +25,20 @@ $(document).ready(function(){
 	}
 
 	if(storageAvailable('sessionStorage')){
-		// visited
+		//visited
 		setValue();
 	}else{
 		alert('your browser does not support session storage, your data maybe lost!');
 	}
 
-//on form change populate data into memory
-$("#urlAddress, #addLine").on('change', function(){
+	//on form change populate data into memory
+	$("#urlAddress, #addLine").on('change', function(){
 		populateStorage();
-});
+	});
 
 function setValue(){
 	var httpMethod = sessionStorage.getItem('httpMethod');
-	console.log(httpMethod);
+	console.log("HTTP method is :" + httpMethod);
 	var inputAddress = sessionStorage.getItem('inputAddress');
 	$('#chooseType').text(  (httpMethod == "" || "null") ? "GET" : httpMethod) ;
 	$('#urlAddress').text(  (inputAddress == "" || "null") ? inputAddress : "") ;

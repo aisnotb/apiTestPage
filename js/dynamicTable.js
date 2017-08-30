@@ -8,10 +8,16 @@ function toggleTable(){
     if($("#add_more_link").data("flag") != 1){
       $("#add_more_link").text("键值增加参数");
       $("#add_more_link").data("flag",1);
+      $("#add_more_link").removeClass("margin-left");
     }else{
       $("#add_more_link").text("批量增加JSON参数");
         $("#add_more_link").data("flag",0);
+        $("#add_more_link").addClass("margin-left");
     }
+
+    // $("#add_more_link").toggle(function(){
+    //
+    // });
 
     $("#bulkAddDiv").toggleClass('hidden');
 }
