@@ -28,7 +28,6 @@ function call(url,callback,data,localData,params,async,isDiffer,type){
 			isApi = true;
 			settings.url = "/api";
 		}
-
 	}else{
 		return;
 	}

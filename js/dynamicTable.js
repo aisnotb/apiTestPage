@@ -34,7 +34,13 @@ function addRow(){
 }
 
 function deleteRow(){
-    $("input[type='checkbox']:checked").parents("tr").remove();
+    var toBeDeleted = $("input[type='checkbox']:checked");
+    if (toBeDeleted.length) {
+      toBeDeleted.parents("tr").remove();
+    }else{
+      alert("请选择一行进行删除");
+    }
+    // $("input[type='checkbox']:checked").parents("tr").remove();
     update();
 }
 
