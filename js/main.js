@@ -22,14 +22,14 @@ $(document).ready(function(){
             // acknowledge QuotaExceededError only if there's something already stored
             storage.length !== 0;
     }
-}
+	}
 
-if(storageAvailable('sessionStorage')){
-	// visited
-	setValue();
-}else{
-	alert('your browser does not support session storage, your data maybe lost!');
-}
+	if(storageAvailable('sessionStorage')){
+		// visited
+		setValue();
+	}else{
+		alert('your browser does not support session storage, your data maybe lost!');
+	}
 
 //on form change populate data into memory
 $("#urlAddress, #addLine").on('change', function(){
@@ -78,21 +78,19 @@ function populateStorage(){
 }
 
 function deleteStorage(){
+	sessionStorage.removeItem("values");
 	var rowArr = $("#addLine tr");
-	var values = sessionStorage.getItem("values");
-	if(values.length > 0){
-		$.each(rowArr, function(){
-				var input = $(this).find("input.form-control");
-				var key = $.trim(input[0].val());
-				var value = $.trim(input[1].val());
-				// var selectedCheckBoxes = $("input[type='checkbox']:checked");
-				$.each(selectedCheckBoxes, function(){
-						sessionStorage.removeItem("");
-				});
-				valueArray.splice();
-		})
-	}
+	var valueArray = [];
+	$.each(rowArr, function(){
+		var input = $(this).find("input.form-control");
+		var key = $.trim( $(input[0]).val());
+		var value = $.trim( $(input[1]).val() );
+		valueArray.push({"key":key,"value":value});
+		// sessionStorage.setItem("abc", {"key": "values"});
+	})
+	sessionStorage.setItem("values", JSON.stringify( valueArray ));
 }
+
 
 	//hide this textarea
 	$("#RawJson").hide();
@@ -101,15 +99,15 @@ function deleteStorage(){
 	$("#sendButton").on('click', function(){
 			var url = "platform:system-gettime";
 			var localData = $("#urlAddress").val();
-
-			call(url,renderDiv, {}, localData);
+			var method =$('#chooseType').find("span").text();
+			console.log(method);
+			call(url,renderDiv, {}, localData,);
 	});
 
 	//选择测试方式
 	$(".urlType").on('click', function(){
 		var method = $(this).find("span").text();
 		if (method === 'POST') {
-				console.log("post");
 				$("#post_link").removeClass('hidden');
 		}else{
 			 $("#post_link").addClass('hidden');
@@ -129,6 +127,7 @@ function deleteStorage(){
 
 	$("#delete_row_link").on('click', function(){
 			deleteRow();
+			deleteStorage();
 	});
 
 	$("#add_more_link").on('click', function(){
