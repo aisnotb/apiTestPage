@@ -26,6 +26,12 @@ function addRow(){
         '<td><input type="text" class="form-control" placeholder="参数名称"></td>',
         '<td><input type="text" class="form-control" placeholder="输入你的参数"></td></tr>'
     ].join(""));
+    $("#id"+numberOfRows).find("td:nth-child(3)").on('keypress',function(e){
+  		if (e.which == 13) {
+  			alert('you clicked on the second one');
+  			addRow();
+  		}
+  	});
 }
 
 function deleteRow(){
