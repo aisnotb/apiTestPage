@@ -32,6 +32,10 @@ $(document).ready(function(){
 	}
 
 	//on form change populate data into memory
+	$("#chooseType").on('click', function(){
+		 console.log("HTTP method changed");
+	});
+
 	$("#urlAddress, #addLine").on('change', function(){
 		populateStorage();
 	});
@@ -50,14 +54,14 @@ function setValue(){
 		var input = rowArr.find("input.form-control");
 		$(input[0]).val(item[0].key);
 		$(input[1]).val(item[0].value);
-			for(var i=1;i<item.length;i++){
+		for(var i=1;i<item.length;i++){
 					rowArr.append([
 			      '<tr id="id'+ (i+1) + '">',
 			        '<td><label class="label-control"><span class="padding-right">'+ (i+1) + '</span><input type="checkbox" value="false"></label></td>',
 			        '<td><input type="text" class="form-control" placeholder="参数名称" value="'+item[i].key+'"></td>',
 			        '<td><input type="text" class="form-control" placeholder="输入你的参数" value="'+item[i].value+'"></td></tr>'
 			    ].join(""));
-			};
+		};
 	}
 }
 
@@ -112,7 +116,8 @@ function deleteStorage(){
 		}else{
 			 $("#post_link").addClass('hidden');
 		}
-		$("#chooseType").text( $(this).find("span").text() );
+		$("#chooseType").text(method);
+		sessionStorage.setItem('httpMethod', method);
 	});
 
 	function renderDiv(res){

@@ -15,10 +15,6 @@ function toggleTable(){
         $("#add_more_link").addClass("margin-left");
     }
 
-    // $("#add_more_link").toggle(function(){
-    //
-    // });
-
     $("#bulkAddDiv").toggleClass('hidden');
 }
 
