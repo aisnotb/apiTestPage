@@ -28,7 +28,6 @@ function addRow(){
     ].join(""));
     $("#id"+numberOfRows).find("td:nth-child(3)").on('keypress',function(e){
   		if (e.which == 13) {
-  			alert('you clicked on the second one');
   			addRow();
   		}
   	});

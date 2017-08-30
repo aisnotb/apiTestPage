@@ -160,8 +160,8 @@ function deleteStorage(){
 			"margin-right": "+=30",
 		}, 1000, function(){
 			console.log("openning side nav animation complete!");
-		})
-	})
+		});
+	});
 
 	//close side nav
 	$(".closebtn").on("click", function(){
