@@ -96,13 +96,29 @@ function deleteStorage(){
 	//hide this textarea
 	$("#RawJson").hide();
 
+	function getParameters(tableRowObj){
+			var  arr = [];
+			$.each(tableRowObj, function(){
+				var input = $(this).find("input.form-control");
+				var key = $.trim( $(input[0]).val());
+				var value = $.trim( $(input[1]).val() );
+				var str = "{\""+key+"\":\""+value+"\"}";
+				arr.push(JSON.parse(str));
+			})
+			return arr;
+	}
+
 	var ele = "";
 	$("#sendButton").on('click', function(){
+			var tableRowObj = $("#addLine tr");
+
 			var url = "platform:system-gettime";
 			var localData = $.trim( $("#urlAddress").val() );
 			var method =$('#chooseType').find("span").text();
+
+			var parameters = getParameters(tableRowObj);
 			if (localData) {
-				call(url,renderDiv, {}, localData,null,null,method);
+				call(url,renderDiv,{parameters} , localData,null,null,method);
 			}else{
 				alert("请输入访问json的地址！");
 			}
